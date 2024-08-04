@@ -5,8 +5,11 @@ const app = express();
 const port = 3001;
 
 app.use(express.json());
-app.use(cors());
-
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 app.post("/update-config", (req, res) => {
     const { sections, highlightColor } = req.body;
     console.log(req.body);
