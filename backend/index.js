@@ -6,25 +6,14 @@ const port = 3001;
 
 app.use(express.json());
 const corsOptions = {
-    origin: ["https://quick-junp.vercel.app/", "http://localhost:5173"],
+    origin: ["https://quick-junp.vercel.app", "http://localhost:5173"],
     credentials: true,
     optionsSuccessStatus: 200,
 };
 
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-        "Access-Control-Allow-Methods",
-        "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-    );
-    res.setHeader(
-        "Access-Control-Allow-Headers",
-        "Content-Type, Authorization"
-    );
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    next();
-});
 app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions));
 
 app.post("/update-config", (req, res) => {
     const { sections, highlightColor } = req.body;
