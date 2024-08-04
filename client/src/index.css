@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  html {  
+    padding: 0px;
+    margin: 0px;
+    background-color:rgb(2 6 23);
+  }
+
+  .bg-pattern {
+    background-image:url(D:\self_practice\quick_jump\client\src\assets\pattern.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
