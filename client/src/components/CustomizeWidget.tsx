@@ -638,9 +638,9 @@ const CustomizeWidget: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div
+                   <div
                     className="border lg:h-96 md:block hidden flex-1 mx-2 rounded p-4 relative items-center
-               justify-center bg-opacity-50 bg-pattern mt-4 md:mt-0 bg-cover bg-center"
+               justify-center bg-white mt-4 md:mt-0 bg-cover bg-center"
                 >
                     <div className="bg-white rounded-2xl shadow-xl p-4 font-light">
                         <p>This is your website</p>
